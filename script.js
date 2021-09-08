@@ -10,7 +10,7 @@ const unlockButton = document.getElementById("unlock-button");
 const responseText = document.getElementById("response-text");
 
 const inputWidth = 70;
-let comboArray = [1, 9, 9, 0];
+/*let comboArray = [1, 9, 9, 0];*/
 
 let lockRestingColor;
 
@@ -100,6 +100,7 @@ const startUnlockAttempt = onComplete => {
 const finishUnlockAttemptSuccess = () => {
   const tl = new TimelineMax();
   tl.to("#response-text", 0.5, { y: 30, opacity: 1 });
+  tl.to("#next-team-button", 0.8, { y: 450, opacity: 1 }, "+=3");
 };
 
 const finishUnlockAttemptFail = () => {
